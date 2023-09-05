@@ -63,7 +63,7 @@ def main():
     if option == 1:
         greedy(sort_data("vi", ascending=False), W)
     elif option == 2:
-        greedy(sort_data("wi"), W)
+        greedy(sort_data("wi" , ascending=True), W)
     elif option == 3:
         greedy_by_vw( data , W )
     else:
