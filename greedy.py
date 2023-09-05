@@ -71,6 +71,12 @@ def main():
         
     exec_end = time.process_time()
     print("Processing time finished at : ", exec_end - exec_start)
+    print("Run again ?")
+    print("1-Yes")
+    print("2-No")
+    option2 = int(input())
+    if option2 == 1:
+        main()
 
 if __name__ == "__main__":
     main()
