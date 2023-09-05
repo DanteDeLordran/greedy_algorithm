@@ -46,7 +46,7 @@ def greedy_by_vw(data: pd.DataFrame, W: float):
     
     print("Selected objects :")
     for i in T:
-        print(f"Object {i}: vi {data.at[i, 'vi']}, wi {data.at[i, 'wi']}, relation v/w {data.at[i, 'vw_ratio']}")
+        print(f"Object {i}: vi {data.at[i, 'vi']}, wi {data.at[i, 'wi']}, ratio v/w {data.at[i, 'vw_ratio']}")
 
     print(f"Total value : {totalV}")
     print(f"Total weight : {totalW}")
