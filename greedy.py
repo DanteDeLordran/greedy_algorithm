@@ -21,9 +21,9 @@ def greedy(localdata: pd.DataFrame, W: float):
             totalW += row["wi"]
             totalV += row["vi"]
 
-    print("Selected objects :")
-    for i in T:
-        print(f"Object {i}: vi {localdata.at[i, 'vi']}, wi {localdata.at[i, 'wi']}")
+    #print("Selected objects :")
+    #for i in T:
+        #print(f"Object {i}: vi {localdata.at[i, 'vi']}, wi {localdata.at[i, 'wi']}")
 
     print(f"Total value : {totalV}")
     print(f"Total weight : {totalW}")
@@ -44,9 +44,9 @@ def greedy_by_vw(data: pd.DataFrame, W: float):
             totalW += row["wi"]
             totalV += row["vi"]
     
-    print("Selected objects :")
-    for i in T:
-        print(f"Object {i}: vi {data.at[i, 'vi']}, wi {data.at[i, 'wi']}, ratio v/w {data.at[i, 'vw_ratio']}")
+    #print("Selected objects :")
+    #for i in T:
+        #print(f"Object {i}: vi {data.at[i, 'vi']}, wi {data.at[i, 'wi']}, ratio v/w {data.at[i, 'vw_ratio']}")
 
     print(f"Total value : {totalV}")
     print(f"Total weight : {totalW}")
