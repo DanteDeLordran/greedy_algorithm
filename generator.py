@@ -1,11 +1,13 @@
 import csv
 import random
 
-def generate_values(n,min,max):
+
+def generate_values(n, min, max):
     values = []
     for _ in range(n):
-        values.append(random.randint(min,max))
+        values.append(random.randint(min, max))
     return values
+
 
 print("Digit the size of the sample")
 n = int(input())
@@ -22,15 +24,15 @@ wMin = int(input())
 print("Max W value")
 wMax = int(input())
 
-W = ((wMin + wMax)/2) * (n * 0.3)
+W = ((wMin + wMax) / 2) * (n * 0.3)
 
-vRange = generate_values(n,vMin,vMax)
-wRange = generate_values(n, wMin,wMax)
+vRange = generate_values(n, vMin, vMax)
+wRange = generate_values(n, wMin, wMax)
 
-data = zip(vRange,wRange)
+data = zip(vRange, wRange)
 
-with open("data.csv","w",newline="") as f:
+with open("data.csv", "w", newline="") as f:
     write = csv.writer(f)
-    
+    write.writerow([W])
     for vi, wi in data:
-        write.writerow([vi, wi, W])
+        write.writerow([vi, wi])
